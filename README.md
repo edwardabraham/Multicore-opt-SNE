@@ -40,12 +40,12 @@ These directions assume little to no experience with programming or environment/
 - Open the Terminal app.
 - Install [Homebrew](https://brew.sh/) using the directions on their website.
 - Use Homebrew to install cmake. The command to enter in Terminal is `brew install cmake`.
-- Use Homebrew to install python 2.x. The command is `brew install python@2`.
+- Use Homebrew to install python. The command is `brew install python`.
 - Use Homebrew to install GCC version 8. The command is `brew install gcc@8`.
 - Set the working directory in Terminal to the folder you downloaded locally in the first step. Don't know how to do that? type the letters `cd ` (with a space afterwards) and then drag the folder into the terminal. Its path should appear. Submit the command and then the current directory of Terminal should be set to the correct folder. Typing `pwd` should indicate being inside the directory and `ls` should show the files present inside it.
-- Enter the command `pip2 install matplotlib` to install this dependency that is only necessary for running `test.py` below.
-- Enter the command `pip2 install .` to install this package.
-- Enter the command `python2 MulticoreTSNE/examples/test.py --n_threads 2`
+- Enter the command `pip install matplotlib` to install this dependency that is only necessary for running `test.py` below.
+- Enter the command `pip install .` to install this package.
+- Enter the command `python OptSNE/examples/test.py --n_threads 2`
   - After submitting this command, a statement should be printed that indicates how many cores are available on your machine and how many are being used by the algorithm. If the number is not 2, then the installation is not correctly configured for parallel processing. This won't affect results but will affect speed, assuming your computer has more than one CPU core.
 
 # Usage
@@ -54,7 +54,7 @@ A script `run_optsne.py` is included that allows this package to be run from the
 ## Mac OSX Terminal
 - Follow the directions above to install the package.
 - If not already done per above, open the Terminal app and set the working directory to this repo.
-- Run with the command `python2 MulticoreTSNE/run/run_optsne.py --optsne --data <path_to_data>`. This is the minimal command necessary to run opt-SNE with all default parameters. Replace `<path_to_data>` with the filepath to a CSV file. Additional parameters can be specified to override defaults (see Arguments section below).
+- Run with the command `python OptSNE/run/run_optsne.py --optsne --data <path_to_data>`. This is the minimal command necessary to run opt-SNE with all default parameters. Replace `<path_to_data>` with the filepath to a CSV file. Additional parameters can be specified to override defaults (see Arguments section below).
 
 ## CSV Formatting Requirements
 - The file must have one line of buffer (usually used for column names, but it doesn't matter what is in this line of the file).
@@ -64,7 +64,7 @@ A script `run_optsne.py` is included that allows this package to be run from the
 
 ## Arguments
 ### Public Arguments
-Add these flags followed directly by values to run_optsne.py to modify algorithm behavior. E.g., `python2 MulticoreTSNE/run/run_optsne.py --optsne --data bendall20k-data.csv --n_threads 4 --perp 50 --n_obs 5000 --verbose 20`. These flags describe arguments to the command line script only. They generally map to the python package itself but some have slightly different names.
+Add these flags followed directly by values to run_optsne.py to modify algorithm behavior. E.g., `python OptSNE/run/run_optsne.py --optsne --data bendall20k-data.csv --n_threads 4 --perp 50 --n_obs 5000 --verbose 20`. These flags describe arguments to the command line script only. They generally map to the python package itself but some have slightly different names.
 - `--data` is the filepath to the data CSV file to be run through the algorithm.
 - `--n_threads` is the number of CPU threads to use.
 - `--learning_rate` is the learning rate (aka "eta"). This is set automatically of running in opt-SNE mode but can be overridden if given as an argument.
