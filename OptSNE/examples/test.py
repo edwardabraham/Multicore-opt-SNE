@@ -1,6 +1,8 @@
 import numpy as np
 import os
 from OptSNE import OptSNE as TSNE
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import multiprocessing

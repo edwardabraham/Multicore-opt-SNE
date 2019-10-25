@@ -2,7 +2,6 @@ from __future__ import print_function
 import numpy as np
 import os
 from OptSNE import OptSNE as TSNE
-import matplotlib.pyplot as plt
 import multiprocessing
 
 import argparse
