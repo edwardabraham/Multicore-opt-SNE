@@ -1,4 +1,4 @@
-from MulticoreTSNE import MulticoreTSNE as TSNE
+from OptSNE import OptSNE as TSNE
 import skimage.io
 import argparse
 import glob

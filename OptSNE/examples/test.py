@@ -1,6 +1,6 @@
 import numpy as np
 import os
-from MulticoreTSNE import MulticoreTSNE as TSNE
+from OptSNE import OptSNE as TSNE
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import multiprocessing

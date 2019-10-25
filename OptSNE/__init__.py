@@ -22,7 +22,7 @@ class FuncThread(threading.Thread):
         self._target(*self._args)
 
 
-class MulticoreTSNE:
+class OptSNE:
     """
     Compute t-SNE embedding using Barnes-Hut optimization and
     multiple cores (if avaialble).

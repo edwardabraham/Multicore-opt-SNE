@@ -8,7 +8,7 @@ from setuptools.command.build_ext import build_ext
 from setuptools import setup, find_packages, Extension
 
 
-PACKAGE_NAME = "MulticoreTSNE"
+PACKAGE_NAME = "OptSNE"
 
 VERSION = '0.1'
 
@@ -69,7 +69,7 @@ class CMakeBuild(build_ext):
 if __name__ == '__main__':
     EXT_MODULES = []
     if 'test' not in sys.argv:
-        EXT_MODULES = [CMakeExtension('MulticoreTSNE.MulticoreTSNE',
+        EXT_MODULES = [CMakeExtension('OptSNE.OptSNE',
                                       sourcedir='multicore_tsne')]
     setup(
         name=PACKAGE_NAME,
@@ -94,6 +94,6 @@ if __name__ == '__main__':
                 'scipy',
             ],
         },
-        test_suite='MulticoreTSNE.tests',
-        tests_require=['MulticoreTSNE[test]']
+        test_suite='OptSNE.tests',
+        tests_require=['OptSNE[test]']
     )
